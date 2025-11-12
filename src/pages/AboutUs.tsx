@@ -262,7 +262,7 @@ export default function AboutUs() {
               >
                 29+ years
               </strong>{" "}
-              we’ve worked with global brands.
+              we've worked with global brands.
             </motion.h6>
 
             <motion.a
