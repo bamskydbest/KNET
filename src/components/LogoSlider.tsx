@@ -19,13 +19,14 @@ const LogoSlider = () => {
     const interval = setInterval(() => {
       setCurrentGroup((prev) => (prev + 1) % logoGroups.length);
     }, 5000);
+    
     return () => clearInterval(interval);
   }, [logoGroups.length]);
 
   return (
     <section
       className="relative bg-white flex items-center justify-center overflow-hidden py-2 md:py-4"
-      style={{ minHeight: "120px" }} // reduced height
+      style={{ minHeight: "120px" }} 
     >
       <div className="w-full max-w-7xl mx-auto px-2 sm:px-4 md:px-6 flex items-center justify-center">
         <div
