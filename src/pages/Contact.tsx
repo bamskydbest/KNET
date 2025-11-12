@@ -147,7 +147,7 @@ const Contact: React.FC = () => {
       const token = await executeRecaptcha("contact_form");
       const payload = { ...form, recaptchaToken: token };
 
-      const response = await fetch("http://localhost:5000/api/contact", {
+      const response = await fetch("https://knet-backend.onrender.com/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
