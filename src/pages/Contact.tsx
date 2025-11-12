@@ -362,7 +362,7 @@ const Contact: React.FC = () => {
 
             <div className="flex justify-center items-center mt-12">
               <motion.img
-                src="/contact7.png"
+                src="/contact.png"
                 alt="K-NET Logo"
                 className="w-[22rem] h-[22rem] drop-shadow-2xl mx-auto"
                 animate={{
