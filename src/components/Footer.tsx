@@ -4,15 +4,13 @@ import { FaInstagram } from "react-icons/fa";
 export default function Footer() {
   return (
     <footer
-      className="text-white py-4 md:py-6" 
+      className="text-white py-4 md:py-6"
       style={{ backgroundColor: "#002f6c" }}
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-10 grid grid-cols-1 sm:grid-cols-3 gap-4 items-center text-center sm:text-left"> 
-        
+      <div className="max-w-7xl mx-auto px-6 md:px-10 flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
 
         {/* Left Section - Logo */}
-        <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-start gap-2">
-          
+        <div className="flex items-center justify-center sm:justify-start">
           <img
             src="/k-NET.png"
             alt="K-NET"
@@ -21,15 +19,21 @@ export default function Footer() {
         </div>
 
         {/* Center Section - Dynamic Year */}
-        <div className="text-md opacity-90 flex justify-center items-center gap-1">
-          <span>Copyright © {new Date().getFullYear()}</span>
-          <span className="text-[#2e94eb]">K-NET</span>
-          <span>...Endless Possibilities</span>
+        <div className="flex flex-col sm:flex-row items-center gap-2 text-md opacity-90 text-center">
+          {/* Copyright (always together) */}
+          <div className="whitespace-nowrap">
+            Copyright © {new Date().getFullYear()}
+          </div>
+
+          {/* K-NET + Endless Possibilities (always together) */}
+          <div className="flex items-center gap-1 whitespace-nowrap">
+            <span className="text-[#2e94eb] font-semibold">K-NET</span>
+            <span>...Endless Possibilities</span>
+          </div>
         </div>
 
         {/* Right Section - Social Icons */}
         <div className="flex justify-center sm:justify-end items-center gap-3 text-xl">
-          
           <a
             href="https://www.facebook.com/knetafrica/"
             target="_blank"
