@@ -24,7 +24,7 @@ export default function Header() {
     { to: "/key-projects", label: "Key Projects" },
     { to: "/our-story", label: "Our Story" },
     {
-      to: "/media",
+      to: "/press-releases",
       label: "Media",
       dropdown: [
         { label: "Press Releases", to: "/press-releases" },
