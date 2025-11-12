@@ -1,0 +1,67 @@
+/* Import Tailwind (includes base, components, and utilities automatically) */
+@import "tailwindcss";
+
+/* 🌈 Custom Theme Tokens */
+@theme {
+  /* Custom brand color */
+  --color-knetBlue: #002f6c;
+
+  /* Custom animation */
+  --animate-fadeIn: fadeIn 0.5s ease-in-out;
+
+  /* Define fadeIn keyframes */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* 📄 Basic global styles */
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  @apply bg-white text-gray-800 antialiased;
+  font-family: "Raleway", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* 🧱 Container utility (like Bootstrap's container-lg) */
+.container-lg {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* 🔗 Small helpers used by header/footer */
+.nav-link {
+  @apply text-sm font-medium text-gray-700;
+}
+/* hide scrollbar for overflow-x on the tabs row (works for webkit and firefox) */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
