@@ -13,6 +13,7 @@ import 'leaflet/dist/leaflet.css';
 import ScrollToTop from './pages/ScrollToTop'
 
 import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
+import Analytics from './components/Analytics'
 
 export default function App() {
   const recaptchaKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
@@ -22,6 +23,7 @@ export default function App() {
   return (
     <GoogleReCaptchaProvider reCaptchaKey={recaptchaKey!}>
       <div className="min-h-screen flex flex-col">
+        <Analytics />
         <Header />
         <main className="flex-1 pt-20">
           <ScrollToTop />
