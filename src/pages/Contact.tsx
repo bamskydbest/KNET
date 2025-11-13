@@ -152,6 +152,7 @@ const Contact: React.FC = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
+      console.log(response)
 
       const data = await response.json();
 
